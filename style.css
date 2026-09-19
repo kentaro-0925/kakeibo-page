@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: #f3f5f7;
+  color: #1f2933;
+}
+
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+.app {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #dfe6ee;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+}
+
+.form-panel {
+  flex: 0 0 420px;
+  padding: 28px 24px;
+}
+
+.list-panel {
+  flex: 1;
+  padding: 28px 24px;
+}
+
+h1, h2 {
+  margin: 0 0 24px;
+  color: #243b53;
+}
+
+h1 {
+  margin: 0 0 28px;
+  text-align: center;
+  font-size: 2.2rem;
+  letter-spacing: 0.08em;
+  color: #203a4d;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334e68;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #1f2933;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #9bb4d1;
+  outline-offset: 1px;
+  border-color: #8aa4c1;
+}
+
+button {
+  min-height: 52px;
+  border: none;
+  border-radius: 10px;
+  background: #315d8c;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button:hover {
+  background: #294d7a;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: #edf3f9;
+  border: 1px solid #d9e4f0;
+  font-weight: 700;
+  color: #264b6d;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+th,
+td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5edf3;
+}
+
+th {
+  background: #f4f7fa;
+  color: #425466;
+  font-size: 0.9rem;
+}
+
+ td {
+  color: #243b53;
+}
+
+@media (max-width: 900px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .form-panel,
+  .list-panel {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
