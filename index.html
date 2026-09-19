@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>家計簿</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>家計簿アプリ</h1>
+
+      <div class="app">
+        <section class="panel form-panel">
+          <h2>入力</h2>
+
+          <form id="kakeibo-form">
+            <div class="form-row">
+              <label for="date">日付</label>
+              <input id="date" name="date" type="date" />
+            </div>
+
+            <div class="form-row">
+              <label for="type">種別</label>
+              <select id="type" name="type">
+                <option value="収入">収入</option>
+                <option value="支出">支出</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="category">カテゴリ</label>
+              <input id="category" name="category" type="text" placeholder="例: 食費、給料、交通費" />
+            </div>
+
+            <div class="form-row">
+              <label for="amount">金額</label>
+              <input id="amount" name="amount" type="number" min="0" step="1" placeholder="0" />
+            </div>
+
+            <button type="submit">登録</button>
+          </form>
+        </section>
+
+        <section class="panel list-panel">
+          <h2>一覧</h2>
+
+          <div class="summary">
+            <span>合計金額</span>
+            <span id="total-amount">0円</span>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>日付</th>
+                  <th>種別</th>
+                  <th>カテゴリ</th>
+                  <th>金額</th>
+                </tr>
+              </thead>
+              <tbody id="kakeibo-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
